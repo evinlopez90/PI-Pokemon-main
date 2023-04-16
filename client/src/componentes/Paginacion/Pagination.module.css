@@ -1,0 +1,45 @@
+.pagination {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+ .pagination span  {
+    margin: 25px;
+}
+
+.pagination ion-icon {
+   font-size: 27px;
+   cursor: pointer;
+}
+
+
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-left: -40px;
+    
+}
+
+.lista li {
+    width: 50px;
+}
+
+.lista li a {
+    margin: 15px;
+    padding: 5px;
+    cursor: pointer;
+    width: 10%;
+    border-radius: 20px;
+}
+
+
+.active {
+    background-color: var(--color-pre);
+}
+
+

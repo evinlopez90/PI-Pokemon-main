@@ -1,0 +1,40 @@
+.pokemons {
+    width: 80%;
+margin-top: 10px;
+ float: left;
+ margin-left: 250px;
+
+}
+
+.pagi {
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    padding: 4px;
+}
+
+.busqueda h1 {
+     font-size: 19px;
+     margin: 0;
+     padding: 0;
+}
+
+.busqueda p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.busqueda ion-icon {
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.busqueda ion-icon:hover {
+  font-size: 25px;
+}

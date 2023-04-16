@@ -1,5 +1,4 @@
 import axios from 'axios';
-require('dotenv').config();
 
 // --- URL API PI POKEMONS ---
 
@@ -12,30 +11,25 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const SEARCH_POKEMON = 'SEARCH_POKEMON';
 export const GET_TYPES = 'GET_TYPES';
 export const FILTER_TYPE = 'FILTER_TYPE';
-export const FILTER_POKEMON = 'FILTER_POKEMON';
-export const RESET_FILTER_ORDER = 'RESET_FILTER_ORDER';
-export const RATING = 'RATING';
+export const ALFABETICO = 'ALFABETICO';
 export const SORT_ATTACK = 'SORT_ATTACK';
 export const RESET_DETAILS = 'RESET_DETAILS';
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
-export const MODIFY_PAGE = 'MODIFY_PAGE';
-export const TOP_PAGE = 'TOP_PAGE';
-export const BOTTOM_PAGE = 'BOTTOM_PAGE';
+export const DEFAULT = 'DEFAULT';
+export const CREATE_OR_API = 'CREATE_OR_API';
+export const HP = 'HP';
 
 // --- Action Creators -------------------------------------
 export const CREATE_POKEMON = 'CREATE_POKEMON';
-export const RESET_CREATED_POKEMON = 'RESET_CREATED_POKEMON';
-export const RESET_SEARCH_POKEMON = 'RESET_SEARCH_POKEMON';
-export const RESET_DETAILS_POKEMON = 'RESET_DETAILS_POKEMON';
+
 // --- Action Errors -------------------------------------
 export const ERROR_CREATED_POKEMON = 'ERROR_CREATE_POKEMON';
 export const ERROR_SEARCH_POKEMON = 'ERROR_SEARCH_POKEMON';
-export const ERROR_GET_POKEMONS = 'ERROR_GET_POKEMONS';
+export const ANULADORA = 'ANULADORA';
+
 
 // --- Action Loadding -------------------------------------
-export const LOADING_DETAILS = 'LOADING_DETAILS';
-export const LOADING_POKEMONS = 'LOADING_POKEMONS';
-export const LOADING_SEARCH = 'LOADING_SEARCH';
+
 
 
 //  loading pokemons
@@ -56,6 +50,23 @@ export function getPokemons(){
     }
 }
 
+
+export function getPokemonsDetail (id){
+    
+    return function (dispatch){ 
+        axios.get(`http://localhost:3096/pokemons/${id}`)
+        .then(response => {
+            dispatch({
+                type: GET_POKEMON_DETAILS,
+                payload: response.data, // recibe un Objeto 
+            });
+
+        }) // error del BACK
+        .catch(error => {
+            console.log("Error coneccion BACK");
+        });
+    }
+}
 
 
 
@@ -101,20 +112,6 @@ export function createPokemon(newPokemon){
 
 
 
-export function resetCreatedPokemon(){
-    return {
-        type: RESET_CREATED_POKEMON,
-        payload: false,
-    }
-}
-
-
-export function resetSearchPokemon(){
-    return {
-        type: RESET_SEARCH_POKEMON,
-        payload: false,
-    }
-}
 
 
 
@@ -133,35 +130,21 @@ export function searchPokemon(searchName){
         .catch(error => {
             dispatch({
                 type: ERROR_SEARCH_POKEMON,
+                payload: "No existe ese nombre"
                 });
         });
     }
 }
 
 
-export function loadingDetailsSet(value){
-    return{
-        type: LOADING_DETAILS,
-        payload: value,
+
+
+export function resetDetail(){
+    return {
+        type: RESET_DETAILS,
+        payload: null,
     }
 }
-
-
-
-export function loadingPokemonsSet(value){
-        return{
-            type: LOADING_POKEMONS,
-            payload: value,
-        }
-}
-
-
-export function loadingSearchSet(){
-    return{
-        type: LOADING_SEARCH,
-    }
-}
-
 
 
 // reset Order Filter
@@ -176,9 +159,9 @@ export function resetFilterOrder(){
 
 
 // order by NAME
-export function rating(order){
+export function alfabetico (order){
     return {
-        type: RATING,
+        type: ALFABETICO,
         payload: order,
     }
 };
@@ -199,11 +182,33 @@ export function filterByType(type){
         payload: type,
     }
 };
+ 
+  export function createOrApi (value) {
+   return (dispatch) => dispatch({
+        type: CREATE_OR_API,
+        payload: value
+    })
+}
+
+ 
+export function setDefault (value) {
+    return (dispatch) => dispatch({
+         type: DEFAULT,
+         payload: value
+     })
+ }
+
+ export function anuladora () {
+    return (dispatch) => dispatch({
+         type: ANULADORA
+     })
+ }
+
+ export function vida (value) {
+    return (dispatch) => dispatch({
+         type: HP,
+         payload: value
+     })
+ }
 
 
-export function filterByPokemon(pokemonType){
-    return {
-        type: FILTER_POKEMON,
-        payload: pokemonType,
-    }
-};

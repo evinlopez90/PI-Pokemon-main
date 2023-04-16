@@ -1,0 +1,101 @@
+
+
+::-webkit-scrollbar{
+   width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.container {
+    height: 100%;
+    margin: 10px;
+    margin-top: -70px;
+    overflow: scroll;
+    width: 100%;
+   background-color: #dddddd;
+   transition: all  0.7s linear;
+ }
+
+ .input {
+   padding: 2px 30px;
+   margin: 1px;
+   margin-left: 8px;
+   
+
+ }
+
+ label {
+   font-size: 12px;
+   font-family: "Roboto";
+   font-weight: bolder;
+   
+ }
+
+
+ 
+ 
+.opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    
+    
+}
+
+.opciones ion-icon {
+   font-size: 23px;
+   display: flex;
+   justify-content: left;
+   margin-right: 10px;
+}
+ .opciones span {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 4px;
+    
+    
+ }
+
+ .opciones p {
+    font-size: 12px;
+    margin: 6px;
+    background-color: var(--color-pre);
+    border-radius: 3px;
+    height: 25px;
+    width: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+ }
+
+
+
+.types {
+    height: 500px;
+     display: block;
+    
+}
+
+.types p {
+    font-size: 14px;
+    margin: 5px;
+    margin-top: 7px;
+    color: black;
+    height: 25px;
+    width: 50px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+ 

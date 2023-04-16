@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+body {
+  background-color: white;
+  color: black;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --color-pre: #09f ;
+  --color-fire: #ff7402;
+--color-grass: #9bcc50;
+--color-steel: #9eb7b8;
+--color-water: #4592c4;
+--color-psychic: #f366b9;
+--color-ground: #ab9842;
+--color-ice: #51c4e7;
+--color-flying: #3dc7ef;
+--color-ghost: #4d5b64;
+--color-normal: #a4acaf;
+--color-poison: #7e0058;
+--color-rock: #a38c21;
+--color-fighting: #d56723;
+--color-dark: #707070;
+--color-bug: #729f3f;
+--color-dragon: #3f1010;
+--color-electric: #bba909;
+--color-fairy: #fdb9e9;
+--color-shadow: #7b62a3;
+--color-unknow: #757575;
+
+--color-primary: #006d77;
+--color-primary-hover: #83c5be;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ :root {
+	--color-f-fire: #FDDFDF;
+	--color-f-grass: #DEFDE0;
+	--color-f-electric: #FCF7DE;
+	--color-f-water: #DEF3FD;
+	--color-f-ground: #f4e7da;
+	--color-f-rock: #d5d5d4;
+	--color-f-fairy: #fceaff;
+	--color-f-poison: #98d7a5;
+	--color-f-bug:  #f8d5a3;
+	--color-f-dragon: #97b3e6;
+	--color-f-psychic: #eaeda1;
+	--color-f-flying: #F5F5F5;
+	--color-f-fighting: #E6E0D4;
+	--color-f-normal: #F5F5F5;
+};

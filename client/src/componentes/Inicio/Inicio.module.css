@@ -1,0 +1,95 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja1 {
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+   animation: movimiento 2.5s linear infinite;
+    
+}
+
+@keyframes movimiento {
+    0%{
+        transform: translateY(0);
+
+    }
+    50%{
+       transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.caja2 span {
+     color: var(--color-pre);
+}
+
+.caja2 hr {
+    margin: 5px;
+   
+}
+
+.caja2 {
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+    text-align: right;
+}
+
+.caja2 h1 {
+    display: flex;
+    justify-content: center;
+    width: 80%;    
+}
+
+
+
+.caja2 p {
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    
+}
+
+.btn {
+    display: flex;
+    justify-content: right;
+    width: 80%;
+}
+
+.btn button {
+    height: 35px;
+    width: 90px;
+    float: left;
+    border: none;
+    background-color: black;
+    color: antiquewhite;
+  color:  var(--color-pre);
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.btn button:hover {
+    background-color: var(--color-pre);
+    color: white;
+    margin-right: 5px;
+}
+
+.caja1 img {
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+   
+}
+
+
